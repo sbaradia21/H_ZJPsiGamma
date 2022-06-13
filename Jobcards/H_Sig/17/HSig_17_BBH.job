@@ -1,0 +1,69 @@
+START
+#verbosity 0
+dataType mc#Signal
+#isGluGluHToZZ 0
+#isqqZZ 0
+#readPFObject 1
+#read#trigObject 0
+useLumiWt 1
+#lumiWtList xsec=0.001 intLumi=35800 nevents=10709773
+#lumiWtList xsec=0.00000972 intLumi=35900 nevents=10709773
+intLumi 27070
+xsec 0.00000008913
+nevents 10709773
+#usePUWt 1
+#puHistFile /afs/cern.ch/user/p/ppigard/work/public/puWeightsMoriond17_v2.root
+#puHistFile /afs/cern.ch/work/s/sarkar/public/Exotic/offlineAnalysis/MC/puWeightsMoriond17_v2.root
+#puHistogram weights
+#dumpEventMax 10
+hlt 0
+year 17
+histFile HtoJPsiGamma_17BBH_hist.root
+#logFile   HHTo4L_run.log
+#eventFile HHTo4L_events.txt
+#selEventFile HHTo4L_selEvents.txt
+##syncDumpFile HHTo4L_sync_4mu_v1.txt
+#syncDumpFile HHTo4L_sync_4e_v1.txt
+#logOption 0
+#maxEvent -1
+#vtxCutList ndf=4 z=24 Rho=2
+#muonCutList eta=2.4 pt=5. dxyPV=0.5 dzPV=1. SIP3D=4.
+#electronCutList pt=7. eta=2.5 dxyPV=0.5 dzPV=1. missingHits=0 SIP3D=4.
+#tauCutList eta=2.3 pt=20. dz=0.2 muVeto=0.5 eleVeto=0.5 isol=0.5
+#jetCutList eta=4.7 pt=30 dRlep=0.4 btagFactor=0.8484
+#photonCutList pt=2 eta=2.4 isol=1.8 dRmin=0.5 dRovEt2=0.012
+#evselCutList hLepPtMin=20. ZMassLow=12. ZMassHigh=120. maxJetPt=60. maxMET=60.
+ratioCutList ptratio=0.28 etratio=0.28
+SRCutList low=100 high=150
+#use#trigger 1
+#single lepton
+#trigPathList HLT_IsoMu20_v
+#trigPathList HLT_IsoTkMu20_v
+#trigPathList HLT_IsoMu22_v
+#trigPathList HLT_IsoTkMu22_v
+#trigPathList HLT_IsoMu24_v
+#trigPathList HLT_IsoTkMu24_v
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_1.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_2.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_3.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_4.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_5.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_6.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_8.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_4/tree_9.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToPsiPrimeG_PsiPrimeToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_11/tree_1.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToPsiPrimeG_PsiPrimeToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_11/tree_2.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToPsiPrimeG_PsiPrimeToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_11/tree_3.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToPsiPrimeG_PsiPrimeToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_11/tree_4.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabmc2017/crab_BBH_HToPsiPrimeG_PsiPrimeToMuMu_TuneCP5_13TeV-madgraph-pythia8_2017_mc2017_task_11/tree_5.root
+#readGenInfo 1
+#dumpGenInfo 0
+#useEventList 0
+#eventId 1 1 54
+#createMVATree 0
+#mvaSkimFile HHTo4L_skim.root
+#readMVA 1
+#mvaXMLFile TMVAClassification_BDT.weights.xml
+#mvAlgo BDT
+END
+

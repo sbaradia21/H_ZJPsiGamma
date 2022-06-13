@@ -1,0 +1,426 @@
+START
+#verbosity 0
+dataType data
+#isGluGluHToZZ 0
+#isqqZZ 0
+#readPFObject 1
+#read#trigObject 0
+#useLumiWt 1
+#lumiWtList xsec=0.001 intLumi=35800 nevents=10709773
+lumiWtList xsec=0.0022 intLumi=35800 nevents=10709773
+#usePUWt 1
+#puHistFile /afs/cern.ch/user/p/ppigard/work/public/puWeightsMoriond17_v2.root
+#puHistFile /afs/cern.ch/work/s/sarkar/public/Exotic/offlineAnalysis/MC/puWeightsMoriond17_v2.root
+#puHistogram weights
+#dumpEventMax 10
+hlt 0
+histFile data2018H_MuEG_hist.root
+#logFile   HHTo4L_run.log
+#eventFile HHTo4L_events.txt
+#selEventFile HHTo4L_selEvents.txt
+##syncDumpFile HHTo4L_sync_4mu_v1.txt
+#syncDumpFile HHTo4L_sync_4e_v1.txt
+#logOption 0
+#maxEvent -1
+#vtxCutList ndf=4 z=24 Rho=2
+#muonCutList eta=2.4 pt=5. dxyPV=0.5 dzPV=1. SIP3D=4.
+#electronCutList pt=7. eta=2.5 dxyPV=0.5 dzPV=1. missingHits=0 SIP3D=4.
+#tauCutList eta=2.3 pt=20. dz=0.2 muVeto=0.5 eleVeto=0.5 isol=0.5
+#jetCutList eta=4.7 pt=30 dRlep=0.4 btagFactor=0.8484 
+#photonCutList pt=2 eta=2.4 isol=1.8 dRmin=0.5 dRovEt2=0.012
+#evselCutList hLepPtMin=20. ZMassLow=12. ZMassHigh=120. maxJetPt=60. maxMET=60.
+ratioCutList ptratio=0.28 etratio=0.28
+SRCutList low=100 high=150
+#use#trigger 1
+#single lepton
+#trigPathList HLT_IsoMu20_v
+#trigPathList HLT_IsoTkMu20_v
+#trigPathList HLT_IsoMu22_v
+#trigPathList HLT_IsoTkMu22_v
+#trigPathList HLT_IsoMu24_v
+#trigPathList HLT_IsoTkMu24_v
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_10.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_11.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_12.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_13.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_14.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_15.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_16.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_17.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_18.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_19.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_1.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_20.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_21.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_22.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_23.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_24.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_25.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_26.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_27.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_28.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_29.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_2.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_30.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_31.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_32.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_33.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_34.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_35.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_36.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_37.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_38.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_39.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_3.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_40.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_41.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_42.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_43.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_44.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_45.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_46.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_47.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_48.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_49.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_4.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_50.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_51.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_52.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_5.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_6.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_7.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_8.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_0/tree_9.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_10.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_11.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_12.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_13.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_14.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_15.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_16.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_17.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_18.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_19.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_1.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_20.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_21.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_22.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_23.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_24.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_25.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_26.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_27.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_28.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_29.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_2.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_3.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_4.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_5.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_6.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_7.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_8.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_1/tree_9.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_10.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_11.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_12.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_13.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_14.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_15.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_16.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_17.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_18.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_19.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_1.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_20.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_21.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_22.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_23.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_24.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_25.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_2.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_3.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_4.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_5.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_6.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_7.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_8.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_2/tree_9.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_100.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_101.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_102.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_103.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_104.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_105.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_106.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_107.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_108.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_109.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_10.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_110.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_111.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_112.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_113.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_114.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_115.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_116.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_117.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_118.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_119.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_11.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_120.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_121.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_122.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_123.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_124.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_12.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_13.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_14.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_15.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_16.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_17.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_18.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_19.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_1.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_20.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_21.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_22.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_23.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_24.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_25.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_26.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_27.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_28.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_29.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_2.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_30.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_31.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_32.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_33.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_34.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_35.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_36.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_37.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_38.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_39.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_3.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_40.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_41.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_42.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_43.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_44.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_45.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_46.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_47.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_48.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_49.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_4.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_50.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_51.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_52.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_53.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_54.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_55.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_56.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_57.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_58.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_59.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_5.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_60.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_61.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_62.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_63.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_64.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_65.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_66.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_67.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_68.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_69.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_6.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_70.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_71.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_72.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_73.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_74.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_75.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_76.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_77.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_78.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_79.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_7.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_80.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_81.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_82.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_83.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_84.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_85.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_86.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_87.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_88.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_89.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_8.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_90.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_91.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_92.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_93.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_94.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_95.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_96.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_97.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_98.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_99.root
+#inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_Charmonium _2018_data2018V2_task_3/tree_9.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_10.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_11.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_12.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_13.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_14.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_15.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_16.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_17.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_18.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_19.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_1.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_20.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_21.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_22.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_23.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_24.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_25.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_26.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_27.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_28.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_29.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_2.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_30.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_31.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_32.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_33.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_34.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_35.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_36.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_37.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_38.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_39.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_3.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_40.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_41.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_42.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_43.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_44.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_45.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_46.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_47.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_48.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_49.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_4.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_50.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_51.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_52.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_53.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_54.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_55.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_5.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_6.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_7.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_8.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_4/tree_9.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_10.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_11.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_12.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_13.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_14.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_1.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_2.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_3.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_4.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_5.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_6.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_7.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_8.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_5/tree_9.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_10.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_11.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_12.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_13.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_14.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_15.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_16.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_17.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_18.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_19.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_1.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_20.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_21.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_22.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_23.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_2.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_3.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_4.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_5.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_6.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_7.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_8.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_6/tree_9.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_10.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_12.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_13.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_14.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_15.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_16.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_17.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_18.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_19.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_1.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_20.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_21.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_22.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_23.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_24.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_26.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_28.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_29.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_2.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_30.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_31.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_32.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_33.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_34.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_35.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_36.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_37.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_39.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_40.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_41.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_42.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_43.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_44.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_45.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_46.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_47.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_48.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_49.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_4.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_50.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_51.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_52.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_53.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_5.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_6.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_7.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_8.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_9.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_3.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_25.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_38.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_27.root
+inputFile /eos/user/s/sroychow/jpsi/ulanaInput/crabdata2018V2/crab_MuonEG_2018_data2018V2_task_7/tree_11.root
+#readGenInfo 1
+#dumpGenInfo 0
+#useEventList 0
+#eventId 1 1 54
+#createMVATree 0
+#mvaSkimFile HHTo4L_skim.root
+#readMVA 1
+#mvaXMLFile TMVAClassification_BDT.weights.xml
+#mvAlgo BDT
+END
