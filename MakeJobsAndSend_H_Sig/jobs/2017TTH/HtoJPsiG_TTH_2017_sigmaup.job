@@ -1,0 +1,42 @@
+START
+era 2017
+dataType mc#signal
+hlt 0
+maxEvent -1
+intLumi 27070
+useLumiWt 1
+usePu_wt 1
+useGen_wt 0
+usePU_gen_wt 0
+useTlumi_wt 0
+useTlumi_wt_hasGen 0
+find_SU 1
+year 17
+############ Skim Info ###############
+createMVATree 0
+############ MVA Info ###############
+readMVA 0
+mvAlgo BDTG
+mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+mvaSkimFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputSignal/output_H/sigmaup/HtoJPsiG_TTH_2017_skim.root
+########### xsec, hist ###########
+xsec 8.97e-08
+histFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputSignal/output_H/sigmaup/HtoJPsiG_TTH_2017_hist.root
+############ Cut lists ###############
+############ Input Files ##############
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_1.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_10.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_11.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_12.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_13.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_14.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_2.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_3.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_4.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_5.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_6.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_7.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_8.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/220505_224805/0000/tree_9.root
+########################################
+END

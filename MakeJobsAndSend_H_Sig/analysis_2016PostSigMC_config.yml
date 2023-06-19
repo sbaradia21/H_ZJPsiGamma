@@ -1,0 +1,67 @@
+tree: Events
+era: 2016Post
+envPath: /cvmfs/cms.cern.ch/cmsset_default.sh
+jobDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final
+exeToRun: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/higgsana.exe
+outDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputSignal/output_H
+commonInfo:
+  - hlt 4
+  - maxEvent -1
+  - intLumi 16755
+  - useLumiWt 1
+  - usePu_wt 1
+  - useGen_wt 0
+  - usePU_gen_wt 0
+  - useTlumi_wt 0
+  - useTlumi_wt_hasGen 0
+  - find_SU 1
+  - year 16
+  - isPre False
+mvaInfo:
+#mvaSkimFile data2016PostH_MuEG_hist_skim.root
+  - readMVA 0
+  - mvAlgo BDTG
+  - mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+skimInfo:
+  - createMVATree 0
+samplesDict:
+  Signal:  
+    ### HtoJPsiG
+    HtoJPsiG_GluGlu_2016Post:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/GluGluToH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_134225/0000
+      xsec: 0.000008570
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_VBF_2016Post:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/VBFToH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_134731/0000
+      xsec: 0.000000661
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_WH_2016Post:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_135252/0000
+      xsec: 0.000000243
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_ZH_2016Post:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/ZH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_135314/0000
+      xsec: 0.000000153
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_TTH_2016Post:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_135851/0000
+      xsec: 0.0000000897
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_BBH_2016Post:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_135353/0000
+      xsec: 0.00000008913
+      filesPerJob: 50
+      group: 'HSignal'
+
+

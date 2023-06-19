@@ -1,0 +1,45 @@
+tree: Events
+era: 2017
+envPath: /cvmfs/cms.cern.ch/cmsset_default.sh
+jobDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final
+exeToRun: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/higgsana.exe
+outDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputData/output_H
+commonInfo:
+  - hlt 0
+  - maxEvent -1
+  - year 17
+mvaInfo:
+#mvaSkimFile data2017H_MuEG_hist_skim.root
+  - readMVA 0
+  - mvAlgo BDTG
+  - mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+skimInfo:
+  - createMVATree 0
+samplesDict:
+  DATA:  
+    ### MuonEG
+    MuonEG_2017_taskB:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/data/MuonEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/230317_000301/0000
+      filesPerJob: 4
+      group: 'data'
+    MuonEG_2017_taskC:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/data/MuonEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/230317_000409/0000
+      filesPerJob: 4
+      group: 'data'
+    MuonEG_2017_taskD:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/data/MuonEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/230317_000525/0000
+      filesPerJob: 4
+      group: 'data'
+    MuonEG_2017_taskE:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/data/MuonEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/230317_000635/0000
+      filesPerJob: 4
+      group: 'data'
+    MuonEG_2017_taskF:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/data/MuonEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/230317_000747/0000
+      filesPerJob: 4
+      group: 'data'

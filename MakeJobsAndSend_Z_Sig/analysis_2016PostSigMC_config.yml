@@ -1,0 +1,35 @@
+tree: Events
+era: 2016Post
+envPath: /cvmfs/cms.cern.ch/cmsset_default.sh
+jobDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final
+exeToRun: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/hzana.exe
+outDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputSignal/output_Z
+commonInfo:
+  - hlt 4
+  - maxEvent -1
+  - intLumi 16755
+  - xsec 0.000318
+  - useLumiWt 1
+  - usePu_wt 1
+  - useGen_wt 0
+  - usePU_gen_wt 0
+  - useTlumi_wt 0
+  - useTlumi_wt_hasGen 0
+  - find_SU 1
+  - year 16
+  - isPre False
+mvaInfo:
+#mvaSkimFile data2018H_MuEG_hist_skim.root
+  - readMVA 0
+  - mvAlgo BDTG
+  - mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+skimInfo:
+  - createMVATree 0
+samplesDict:
+  Signal:  
+    ### ZtoJPsiG
+    ZtoJPsiG_2016Post:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/ZToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/220506_135915/0000
+      filesPerJob: 50
+      group: 'ZSignal'

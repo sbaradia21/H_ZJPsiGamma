@@ -1,0 +1,29 @@
+START
+era 2017
+dataType mc
+hlt 0
+maxEvent -1
+intLumi 27070
+useLumiWt 1
+usePu_wt 1
+useGen_wt 0
+usePU_gen_wt 0
+useTlumi_wt 0
+useTlumi_wt_hasGen 0
+find_SU 1
+year 17
+############ Skim Info ###############
+createMVATree 0
+############ MVA Info ###############
+readMVA 0
+mvAlgo BDTG
+mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+mvaSkimFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/apple/HtoMuMuG_ZH_2017_skim.root
+########### xsec, hist ###########
+xsec 3.4e-05
+histFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/apple/HtoMuMuG_ZH_2017_hist.root
+############ Cut lists ###############
+############ Input Files ##############
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2017/mc/ZHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/221123_142137/0000/tree_2.root
+########################################
+END

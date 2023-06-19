@@ -21,6 +21,8 @@
 #include <unordered_map>
 #include <TString.h>
 #include "TLorentzVector.h"
+#include "MVASkim.h"
+#include "MVAnalysis.h"
 
 using std::ostream;
 
@@ -39,6 +41,8 @@ public :
    UInt_t          luminosityBlock;
    ULong64_t       event;
    Float_t         puWeight;
+   Float_t         puWeightUp;
+   Float_t         puWeightDown;
    Float_t         HTXS_Higgs_pt;
    Float_t         HTXS_Higgs_y;
    Int_t           HTXS_stage1_1_cat_pTjet25GeV;
@@ -353,6 +357,8 @@ public :
    Bool_t          Photon_mvaID_WP90[6];   //[nPhoton]
    Bool_t          Photon_pixelSeed[6];   //[nPhoton]
    UChar_t         Photon_seedGain[6];   //[nPhoton]
+   Float_t         Photon_dEsigmaUp[6];
+   Float_t         Photon_dEsigmaDown[6];
    Float_t         Pileup_nTrueInt;
    Float_t         Pileup_pudensity;
    Float_t         Pileup_gpudensity;
@@ -982,12 +988,19 @@ public :
    Bool_t          L1_UnpairedBunchBptxPlus;
    Bool_t          L1_ZeroBias;
    Bool_t          L1_ZeroBias_copy;
+   Double_t        genEventSumw=0.;
+   Double_t        genEventSumw_=0.;
 
    // List of branches
+   TBranch        *b_genEventSumw;
+   TBranch        *b_genEventSumw_;
+
    TBranch        *b_run;   //!
    TBranch        *b_luminosityBlock;   //!
    TBranch        *b_event;   //!
    TBranch        *b_puWeight;
+   TBranch        *b_puWeightUp;
+   TBranch        *b_puWeightDown;
    TBranch        *b_HTXS_Higgs_pt;   //!
    TBranch        *b_HTXS_Higgs_y;   //!
    TBranch        *b_HTXS_stage1_1_cat_pTjet25GeV;   //!
@@ -1302,6 +1315,8 @@ public :
    TBranch        *b_Photon_mvaID_WP90;   //!
    TBranch        *b_Photon_pixelSeed;   //!
    TBranch        *b_Photon_seedGain;   //!
+   TBranch        *b_Photon_dEsigmaDown;
+   TBranch        *b_Photon_dEsigmaUp;
    TBranch        *b_Pileup_nTrueInt;   //!
    TBranch        *b_Pileup_pudensity;   //!
    TBranch        *b_Pileup_gpudensity;   //!
@@ -1942,6 +1957,7 @@ public :
    virtual Bool_t   Notify();
    virtual void     Show(Long64_t entry = -1);
    TChain* chain = new TChain();
+   TChain* chain1 = new TChain();
 
    // *******************************************************
    /*
@@ -2002,7 +2018,6 @@ public :
    int hlt() const {return hlt_;}
    int year() const{return year_;}
    bool isPre() const {return isPre_;}
-
    
    //double xsection() const {return xsec_;}
 
@@ -2023,7 +2038,21 @@ public :
    bool useLumiWt_{false};
    bool isPre_{false};
    //double xsec_{-99.};
-   
+   int maxEvt_;
+   int maxEvent_;
+   bool ispu_wt{false};
+   bool isgen_wt{false};
+   bool ispu_gen_wt{false};
+   bool istlumi_wt{false};
+   bool istlumi_wt_hasGen{false};
+   bool find_SU{false};
+   bool createMVATree_ {false};
+   bool readMVA_ {false};
+   std::string mvaSkimFile_ {""};
+   std::string mvAlgo_ {"BDTG"};
+   std::string mvaXMLFile_ {""};
+   std::unique_ptr<MVASkim> skimObj_ {nullptr};
+   std::unique_ptr<MVAnalysis> mvAna_ {nullptr};
    //std::unordered_map<std::string, int> eventIdMap_;
    std::map<std::string, std::map<std::string, double>> hmap_;
    double cutValue(const std::map<std::string, double>& m, const std::string& cname);                                                                                                                    
@@ -2102,8 +2131,10 @@ public :
    //TString puhistname = "weights";// 2016 & 2017 Nicola
    //double dopuweight(int& num_pu_vt) const;
    bool bookedHistograms;
-   double SFCalc(TH2F* h, double pt, double eta);
-   
+   double SFCalc(TH2F* h, double pt, double eta, int id);
+   double triggSFCalc(TH2F* h, double pt_mu, double pt_pho);
+   double triggSFCalcSU(TH2F* h, double pt_mu, double pt_pho);
+   double SFCalcSU(TH2F* h, double pt, double eta, int id);
    template <class T>
      class PtComparatorTL {
    public:
@@ -2117,7 +2148,7 @@ public :
 #endif
 
 #ifdef HtoJPsiGamma_cxx
-HtoJPsiGamma::HtoJPsiGamma(TTree *tree) : chain(0) 
+HtoJPsiGamma::HtoJPsiGamma(TTree *tree) : chain(0),chain1(0) 
 {
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
@@ -2134,10 +2165,9 @@ HtoJPsiGamma::HtoJPsiGamma(TTree *tree) : chain(0)
       //f = new TFile("/afs/cern.ch/user/p/ppalit/public/hHtoJPsiGamma/CMSSW_9_4_8/src/offlineAnalysis_17/A897EC1C-6A36-4149-BC29-6EE7BE5DC1E7.root");  // DY Background
     }
   
-  
 
     f->GetObject("Events",tree);
-
+    f->GetObject("Runs",tree);
   }
 
    Init(tree);
@@ -2148,6 +2178,8 @@ HtoJPsiGamma::~HtoJPsiGamma()
 {
    if (!chain) return;
    delete chain->GetCurrentFile();
+   if (!chain1) return;
+   delete chain1->GetCurrentFile();
 }
 
 Int_t HtoJPsiGamma::GetEntry(Long64_t entry)
@@ -2190,6 +2222,8 @@ void HtoJPsiGamma::Init(TTree *tree)
    chain->SetBranchAddress("luminosityBlock", &luminosityBlock, &b_luminosityBlock);
    chain->SetBranchAddress("event", &event, &b_event);
    chain->SetBranchAddress("puWeight", &puWeight, &b_puWeight);
+   chain->SetBranchAddress("puWeightUp", &puWeightUp, &b_puWeightUp);
+   chain->SetBranchAddress("puWeightDown", &puWeightDown, &b_puWeightDown);
    chain->SetBranchAddress("HTXS_Higgs_pt", &HTXS_Higgs_pt, &b_HTXS_Higgs_pt);
    chain->SetBranchAddress("HTXS_Higgs_y", &HTXS_Higgs_y, &b_HTXS_Higgs_y);
    chain->SetBranchAddress("HTXS_stage1_1_cat_pTjet25GeV", &HTXS_stage1_1_cat_pTjet25GeV, &b_HTXS_stage1_1_cat_pTjet25GeV);
@@ -2504,6 +2538,8 @@ void HtoJPsiGamma::Init(TTree *tree)
    chain->SetBranchAddress("Photon_mvaID_WP90", Photon_mvaID_WP90, &b_Photon_mvaID_WP90);
    chain->SetBranchAddress("Photon_pixelSeed", Photon_pixelSeed, &b_Photon_pixelSeed);
    chain->SetBranchAddress("Photon_seedGain", Photon_seedGain, &b_Photon_seedGain);
+   chain->SetBranchAddress("Photon_dEsigmaDown",Photon_dEsigmaDown, &b_Photon_dEsigmaDown);
+   chain->SetBranchAddress("Photon_dEsigmaUp", Photon_dEsigmaUp, &b_Photon_dEsigmaUp);
    chain->SetBranchAddress("Pileup_nTrueInt", &Pileup_nTrueInt, &b_Pileup_nTrueInt);
    chain->SetBranchAddress("Pileup_pudensity", &Pileup_pudensity, &b_Pileup_pudensity);
    chain->SetBranchAddress("Pileup_gpudensity", &Pileup_gpudensity, &b_Pileup_gpudensity);
@@ -3133,7 +3169,10 @@ void HtoJPsiGamma::Init(TTree *tree)
    chain->SetBranchAddress("L1_ZeroBias", &L1_ZeroBias, &b_L1_ZeroBias);
    chain->SetBranchAddress("L1_ZeroBias_copy", &L1_ZeroBias_copy, &b_L1_ZeroBias_copy);
 
-   
+   chain1  = new TChain("Runs");
+   chain1->SetMakeClass(1);
+   chain1->SetBranchAddress("genEventSumw", &genEventSumw, &b_genEventSumw);
+   chain1->SetBranchAddress("genEventSumw_", &genEventSumw_, &b_genEventSumw_);
 
 
    Notify();

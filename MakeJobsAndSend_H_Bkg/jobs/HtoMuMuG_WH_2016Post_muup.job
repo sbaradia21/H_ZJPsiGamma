@@ -1,0 +1,52 @@
+START
+era 2016Post
+dataType mc
+hlt 4
+maxEvent -1
+intLumi 35930
+useLumiWt 1
+usePu_wt 1
+useGen_wt 0
+usePU_gen_wt 0
+useTlumi_wt 0
+useTlumi_wt_hasGen 0
+find_SU 1
+year 16
+isPre False
+############ Skim Info ###############
+createMVATree 0
+############ MVA Info ###############
+readMVA 0
+mvAlgo BDTG
+mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+mvaSkimFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/muup/HtoMuMuG_WH_2016Post_skim.root
+########### xsec, hist ###########
+xsec 5.41e-05
+histFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/muup/HtoMuMuG_WH_2016Post_hist.root
+############ Cut lists ###############
+############ Input Files ##############
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_1.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_11.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_12.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_13.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_14.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_15.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_16.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_17.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_18.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_19.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_2.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_20.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_21.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_22.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_23.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_24.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_3.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_4.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_5.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_6.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_7.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_8.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/WHToMuMuG_M125_Dalitz_012j_TuneCP5_13TeV_amcatnloFXFX_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135359/0000/tree_9.root
+########################################
+END

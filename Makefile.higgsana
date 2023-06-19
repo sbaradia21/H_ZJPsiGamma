@@ -11,14 +11,17 @@ DICTH  = $(patsubst %.$(CSUF),%.h,$(DICTC))
 
 SRCS   = src/PhysicsObjects.cc \
          src/HtoJPsiGamma.cc \
-         src/higgsanamain.cc 
+         src/higgsanamain.cc \
+	 src/MVASkim.cc \
+	 src/MVAnalysis.cc \
+         src/RoccoR.cc
 OBJS   = $(patsubst %.$(CSUF), %.o, $(SRCS))
 
 DEBUG_FLAG = -g # -O3
 CXX      = g++
-LDFLAGS  = $(DEBUG_FLAG)
+LDFLAGS  = $(DEBUG_FLAG) -L/afs/cern.ch/user/s/sbaradia/.local/lib/python3.9/site-packages/correctionlib/lib -lcorrectionlib
 SOFLAGS  = -shared 
-CXXFLAGS = $(DEBUG_FLAG) -std=c++14 -Wall -Wextra -Wno-deprecated -pedantic -I./interface  -I./
+CXXFLAGS = $(DEBUG_FLAG) -s -std=c++17 -Wall -Wextra -Wno-deprecated -pedantic -I/afs/cern.ch/user/s/sbaradia/.local/lib/python3.9/site-packages/correctionlib/include -I./interface -I./
 LIBS = 
 
 # Add names of the header files which you do not want to create dictionary of

@@ -1,0 +1,67 @@
+tree: Events
+era: 2016Pre
+envPath: /cvmfs/cms.cern.ch/cmsset_default.sh
+jobDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final
+exeToRun: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/higgsana.exe
+outDir: /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputSignal/output_H
+commonInfo:
+  - hlt 4
+  - maxEvent -1
+  - intLumi 19480
+  - useLumiWt 1
+  - usePu_wt 1
+  - useGen_wt 0
+  - usePU_gen_wt 0
+  - useTlumi_wt 0
+  - useTlumi_wt_hasGen 0
+  - find_SU 1
+  - year 16
+  - isPre True
+mvaInfo:
+#mvaSkimFile data2016PreH_MuEG_hist_skim.root
+  - readMVA 0
+  - mvAlgo BDTG
+  - mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+skimInfo:
+  - createMVATree 0
+samplesDict:
+  Signal:  
+    ### HtoJPsiG
+    HtoJPsiG_GluGlu_2016Pre:
+      filedirs: 
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/GluGluToH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_114829/0000
+      xsec: 0.000008570
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_VBF_2016Pre:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/VBFToH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_115347/0000
+      xsec: 0.000000661
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_WH_2016Pre:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/WH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_115410/0000
+      xsec: 0.000000243
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_ZH_2016Pre:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/ZH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_115441/0000
+      xsec: 0.000000153
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_TTH_2016Pre:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/TTH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_115533/0000
+      xsec: 0.0000000897
+      filesPerJob: 50
+      group: 'HSignal'
+    HtoJPsiG_BBH_2016Pre:
+      filedirs:
+        - /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/BBH_HToJPsiG_JPsiToMuMu_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/220506_115511/0000
+      xsec: 0.00000008913
+      filesPerJob: 50
+      group: 'HSignal'
+
+

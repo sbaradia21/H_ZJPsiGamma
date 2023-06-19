@@ -1,0 +1,31 @@
+START
+era 2016Post
+dataType mc#signal
+hlt 4
+maxEvent -1
+intLumi 35930
+xsec 0.0794
+useLumiWt 1
+usePu_wt 1
+useGen_wt 0
+usePU_gen_wt 0
+useTlumi_wt 0
+useTlumi_wt_hasGen 0
+find_SU 1
+year 16
+isPre False
+############ Skim Info ###############
+createMVATree 0
+############ MVA Info ###############
+readMVA 0
+mvAlgo BDTG
+mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+mvaSkimFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_Z/sigmadown/ZtoMuMuG_2016Post_skim.root
+########### xsec,lumi,hist ###########
+histFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_Z/sigmadown/ZtoMuMuG_2016Post_hist.root
+############ Cut lists ###############
+############ Input Files ##############
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/ZGTo2MuG_mll_2to15_LO_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135523/0000/tree_1.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/postvfp/ZGTo2MuG_mll_2to15_LO_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/221123_135523/0000/tree_2.root
+########################################
+END

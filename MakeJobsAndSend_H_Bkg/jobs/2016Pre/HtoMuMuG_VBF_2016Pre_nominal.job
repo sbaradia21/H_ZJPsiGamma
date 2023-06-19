@@ -1,0 +1,31 @@
+START
+era 2016Pre
+dataType mc
+hlt 4
+maxEvent -1
+intLumi 35930
+useLumiWt 1
+usePu_wt 1
+useGen_wt 0
+usePU_gen_wt 0
+useTlumi_wt 0
+useTlumi_wt_hasGen 0
+find_SU 1
+year 16
+isPre True
+############ Skim Info ###############
+createMVATree 0
+############ MVA Info ###############
+readMVA 0
+mvAlgo BDTG
+mvaXMLFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/ML/BDTG/TMVAClassification_BDTG.weights.xml
+mvaSkimFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/nominal/HtoMuMuG_VBF_2016Pre_skim.root
+########### xsec, hist ###########
+xsec 0.000146
+histFile /afs/cern.ch/work/s/sbaradia/public/Analysis/HZtoJPsiGamma_final/outputBkg/output_H/nominal/HtoMuMuG_VBF_2016Pre_hist.root
+############ Cut lists ###############
+############ Input Files ##############
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/VBFHToMuMuG_M125_Dalitz_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/221123_134428/0000/tree_1.root
+inputFile /eos/user/s/sbaradia2/HZJPsiGamma/store/y2016/mc/prevfp/VBFHToMuMuG_M125_Dalitz_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/221123_134428/0000/tree_2.root
+########################################
+END
