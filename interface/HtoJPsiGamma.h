@@ -23,9 +23,10 @@
 #include "TLorentzVector.h"
 #include "MVASkim.h"
 #include "MVAnalysis.h"
+#include "json.hpp"
 
 using std::ostream;
-
+using json = nlohmann::json;
 
 // Header file for the classes stored in the TTree if any.
 
@@ -35,7 +36,7 @@ public :
    Int_t           fCurrent; //!current Tree number in a TChain
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
-
+   json datajson_;
    // Declaration of leaf types
    UInt_t          run;
    UInt_t          luminosityBlock;
@@ -2049,6 +2050,7 @@ public :
    bool createMVATree_ {false};
    bool readMVA_ {false};
    std::string mvaSkimFile_ {""};
+   std::string jsonFile_{""};
    std::string mvAlgo_ {"BDTG"};
    std::string mvaXMLFile_ {""};
    std::unique_ptr<MVASkim> skimObj_ {nullptr};
@@ -2069,6 +2071,8 @@ public :
 
    float costheta1(TLorentzVector particle_orig, TLorentzVector parent_orig);
    float costhetastar(TLorentzVector particle_orig, TLorentzVector parent_orig);
+   void setJson(const std::string gjsonF);
+   bool isGoodLumi(unsigned int run, unsigned int lumi);
    void tokenize(const std::string& str, std::vector<std::string>& tokens, const std::string& delimiters=" ");
    void buildList(const std::vector<std::string>& tokens, std::vector<std::string>& list);
    //void buildMap(const vector<string>& tokens, map<string, int>& hmap);

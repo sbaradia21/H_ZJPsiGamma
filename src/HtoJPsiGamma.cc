@@ -25,7 +25,9 @@
 #include "correction.h"
 #include "correctionlib_version.h"
 #include "RoccoR.h"
+#include "json.hpp"
 using namespace std;
+//using json = nlohmann::json;
 
 void HtoJPsiGamma::tokenize(const string& str, vector<string>& tokens, const string& delimiters) {
   // Skip delimiters at beginning.                                                                                                         
@@ -44,6 +46,26 @@ void HtoJPsiGamma::tokenize(const string& str, vector<string>& tokens, const str
     // Find next "non-delimiter"                                                                                                            
     pos = str.find_first_of(delimiters, lastPos);
   }
+}
+void HtoJPsiGamma::setJson(const std::string gjsonF) {
+  std::ifstream fin(gjsonF.c_str());
+  fin >> datajson_; 
+  fin.close();
+}
+
+
+bool HtoJPsiGamma::isGoodLumi(unsigned int run, unsigned int lumi) {
+  std::string rkey = std::to_string(run);
+  // find a run
+  if (datajson_.find(rkey) != datajson_.end()) {//first check if run in json
+    for( auto& lsL : datajson_.at(rkey)) {//these are the lumi blocks
+      unsigned int low = lsL.at(0);
+      unsigned int up = lsL.at(1);
+      if(lumi >= low && lumi <=up)//Lumi is in range
+        return true;//there is no else part since one has loop over all LS blocks in a Run
+    }//lsb loop
+  }//if block 
+  return false;
 }
 
 void HtoJPsiGamma::buildList(const vector<string>& tokens, vector<string>& list) {
@@ -708,7 +730,10 @@ bool HtoJPsiGamma::readJob(const std::string& jobFile, int& nFiles){
         }
       }
     }
-
+    else if(key== "jsonFile") {
+      jsonFile_ = value;
+      setJson(jsonFile_);
+    }
     else if (key == "useLumiWt")
       useLumiWt_ = std::stoi(value.c_str()) > 0 ? true : false;
     else if (key == "intLumi")
@@ -758,7 +783,7 @@ bool HtoJPsiGamma::readJob(const std::string& jobFile, int& nFiles){
       mvAlgo_ = value;
     else if (key == "inputFile")
       HtoJPsiGamma::buildList(tokens, fileList_);
-  }
+    }
   
   
   // Close the file                                                  
@@ -975,10 +1000,10 @@ void HtoJPsiGamma::Loop()
   auto t_end = std::chrono::high_resolution_clock::now();
   
   for (Long64_t jentry=0; jentry<nentries; jentry++) {
-    //for (Long64_t jentry=0; jentry<1000; jentry++) {
+    //for (Long64_t jentry=0; jentry<100000; jentry++) {
     HLT_Mu17_Photon30_CaloIdL_L1ISO =0;
     HLT_Mu17_Photon30_IsoCaloId = 0;
-    
+    bool isGood = 1;
     int count_=0;
     Long64_t ientry = LoadTree(jentry);
     if (ientry < 0) break;
@@ -991,6 +1016,12 @@ void HtoJPsiGamma::Loop()
 		 <<"  Estimated time left : "<< std::chrono::duration<double, std::milli>(t_end-t_start).count()*( nentries - jentry)/(1e-9 + jentry)* 0.001
 		 <<std::endl;
       }
+    if(!isMC()) {
+      isGood = isGoodLumi(run,luminosityBlock);
+    }
+    if(!isGood) continue;
+    //    std::cout<<isGoodLumi(run,luminosityBlock)<<std::endl;
+    //if(!isMC() && !isGoodLumi(run,luminosityBlock)) continue;
     float weight_scalefactor_mu1 = 1.;
     float weight_scalefactor_mu2 = 1.;
     float weight_scalefactor_mu = 1.;
